@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SearchTBViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:217.0/255 green:217.0/255 blue:217.0/255 alpha:0.5]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[SearchTBViewController new]];
+    
     return YES;
 }
 
