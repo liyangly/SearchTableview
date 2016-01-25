@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B689D5B71C51BCF7009FF6B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5B61C51BCF7009FF6B5 /* main.m */; };
 		B689D5BA1C51BCF7009FF6B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5B91C51BCF7009FF6B5 /* AppDelegate.m */; };
-		B689D5C01C51BCF7009FF6B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B689D5BE1C51BCF7009FF6B5 /* Main.storyboard */; };
 		B689D5C21C51BCF7009FF6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B689D5C11C51BCF7009FF6B5 /* Assets.xcassets */; };
 		B689D5C51C51BCF7009FF6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B689D5C31C51BCF7009FF6B5 /* LaunchScreen.storyboard */; };
 		B689D5D01C51BCF7009FF6B5 /* SearchTableviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5CF1C51BCF7009FF6B5 /* SearchTableviewTests.m */; };
@@ -40,7 +39,6 @@
 		B689D5B61C51BCF7009FF6B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B689D5B81C51BCF7009FF6B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B689D5B91C51BCF7009FF6B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B689D5BF1C51BCF7009FF6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B689D5C11C51BCF7009FF6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B689D5C41C51BCF7009FF6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B689D5C61C51BCF7009FF6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 			children = (
 				B689D5B81C51BCF7009FF6B5 /* AppDelegate.h */,
 				B689D5B91C51BCF7009FF6B5 /* AppDelegate.m */,
-				B689D5BE1C51BCF7009FF6B5 /* Main.storyboard */,
 				B689D5C11C51BCF7009FF6B5 /* Assets.xcassets */,
 				B689D5C31C51BCF7009FF6B5 /* LaunchScreen.storyboard */,
 				B689D5C61C51BCF7009FF6B5 /* Info.plist */,
@@ -250,7 +247,6 @@
 			files = (
 				B689D5C51C51BCF7009FF6B5 /* LaunchScreen.storyboard in Resources */,
 				B689D5C21C51BCF7009FF6B5 /* Assets.xcassets in Resources */,
-				B689D5C01C51BCF7009FF6B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,14 +310,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B689D5BE1C51BCF7009FF6B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B689D5BF1C51BCF7009FF6B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B689D5C31C51BCF7009FF6B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -502,6 +490,7 @@
 				B689D5E11C51BCF7009FF6B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B689D5E21C51BCF7009FF6B5 /* Build configuration list for PBXNativeTarget "SearchTableviewTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +499,7 @@
 				B689D5E41C51BCF7009FF6B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B689D5E51C51BCF7009FF6B5 /* Build configuration list for PBXNativeTarget "SearchTableviewUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +508,7 @@
 				B689D5E71C51BCF7009FF6B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
