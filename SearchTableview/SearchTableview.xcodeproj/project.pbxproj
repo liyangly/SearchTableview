@@ -8,14 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B62B3AB91C57051D00AE7E4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62B3AB81C57051D00AE7E4D /* Main.storyboard */; };
+		B659E5801C58AE6B00817054 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B659E57F1C58AE6B00817054 /* UIColor+Util.m */; };
+		B659E5831C58B4FA00817054 /* escrowAcct@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B659E5821C58B4FA00817054 /* escrowAcct@2x.png */; };
+		B659E5851C58B71E00817054 /* gesturePswd1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B659E5841C58B71E00817054 /* gesturePswd1@2x.png */; };
+		B659E5901C58BFDF00817054 /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B659E5891C58BFDF00817054 /* SearchCell.m */; };
+		B659E5911C58BFDF00817054 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B659E58A1C58BFDF00817054 /* SearchCell.xib */; };
+		B659E5921C58BFDF00817054 /* SearchTBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B659E58C1C58BFDF00817054 /* SearchTBViewController.m */; };
+		B659E5931C58BFDF00817054 /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B659E58F1C58BFDF00817054 /* SearchTableView.m */; };
+		B659E5961C58C6B900817054 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B659E5951C58C6B900817054 /* SearchView.m */; };
 		B689D5B71C51BCF7009FF6B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5B61C51BCF7009FF6B5 /* main.m */; };
 		B689D5BA1C51BCF7009FF6B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5B91C51BCF7009FF6B5 /* AppDelegate.m */; };
 		B689D5C21C51BCF7009FF6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B689D5C11C51BCF7009FF6B5 /* Assets.xcassets */; };
 		B689D5C51C51BCF7009FF6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B689D5C31C51BCF7009FF6B5 /* LaunchScreen.storyboard */; };
 		B689D5D01C51BCF7009FF6B5 /* SearchTableviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5CF1C51BCF7009FF6B5 /* SearchTableviewTests.m */; };
 		B689D5DB1C51BCF7009FF6B5 /* SearchTableviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5DA1C51BCF7009FF6B5 /* SearchTableviewUITests.m */; };
-		B689D5F01C51D1EF009FF6B5 /* SearchTBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5EF1C51D1EF009FF6B5 /* SearchTBViewController.m */; };
-		B689D5F31C51D312009FF6B5 /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B689D5F21C51D312009FF6B5 /* SearchTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,19 @@
 
 /* Begin PBXFileReference section */
 		B62B3AB81C57051D00AE7E4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B659E57E1C58AE6B00817054 /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
+		B659E57F1C58AE6B00817054 /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
+		B659E5821C58B4FA00817054 /* escrowAcct@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "escrowAcct@2x.png"; sourceTree = "<group>"; };
+		B659E5841C58B71E00817054 /* gesturePswd1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gesturePswd1@2x.png"; sourceTree = "<group>"; };
+		B659E5881C58BFDF00817054 /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
+		B659E5891C58BFDF00817054 /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
+		B659E58A1C58BFDF00817054 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		B659E58B1C58BFDF00817054 /* SearchTBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTBViewController.h; sourceTree = "<group>"; };
+		B659E58C1C58BFDF00817054 /* SearchTBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTBViewController.m; sourceTree = "<group>"; };
+		B659E58E1C58BFDF00817054 /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
+		B659E58F1C58BFDF00817054 /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
+		B659E5941C58C6B900817054 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		B659E5951C58C6B900817054 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		B689D5B21C51BCF7009FF6B5 /* SearchTableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTableview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B689D5B61C51BCF7009FF6B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B689D5B81C51BCF7009FF6B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,10 +69,6 @@
 		B689D5D61C51BCF7009FF6B5 /* SearchTableviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchTableviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B689D5DA1C51BCF7009FF6B5 /* SearchTableviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableviewUITests.m; sourceTree = "<group>"; };
 		B689D5DC1C51BCF7009FF6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B689D5EE1C51D1EF009FF6B5 /* SearchTBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTBViewController.h; sourceTree = "<group>"; };
-		B689D5EF1C51D1EF009FF6B5 /* SearchTBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTBViewController.m; sourceTree = "<group>"; };
-		B689D5F11C51D312009FF6B5 /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
-		B689D5F21C51D312009FF6B5 /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B659E57A1C58AB9D00817054 /* CateGory */ = {
+			isa = PBXGroup;
+			children = (
+				B659E57E1C58AE6B00817054 /* UIColor+Util.h */,
+				B659E57F1C58AE6B00817054 /* UIColor+Util.m */,
+			);
+			path = CateGory;
+			sourceTree = "<group>";
+		};
+		B659E5811C58B4FA00817054 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				B659E5841C58B71E00817054 /* gesturePswd1@2x.png */,
+				B659E5821C58B4FA00817054 /* escrowAcct@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		B659E5861C58BFDF00817054 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B659E5871C58BFDF00817054 /* cell */,
+				B659E58D1C58BFDF00817054 /* view */,
+				B659E58B1C58BFDF00817054 /* SearchTBViewController.h */,
+				B659E58C1C58BFDF00817054 /* SearchTBViewController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B659E5871C58BFDF00817054 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B659E5881C58BFDF00817054 /* SearchCell.h */,
+				B659E5891C58BFDF00817054 /* SearchCell.m */,
+				B659E58A1C58BFDF00817054 /* SearchCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B659E58D1C58BFDF00817054 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B659E58E1C58BFDF00817054 /* SearchTableView.h */,
+				B659E58F1C58BFDF00817054 /* SearchTableView.m */,
+				B659E5941C58C6B900817054 /* SearchView.h */,
+				B659E5951C58C6B900817054 /* SearchView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B689D5A91C51BCF7009FF6B5 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +169,9 @@
 		B689D5B41C51BCF7009FF6B5 /* SearchTableview */ = {
 			isa = PBXGroup;
 			children = (
+				B659E5861C58BFDF00817054 /* Search */,
+				B659E5811C58B4FA00817054 /* Image */,
+				B659E57A1C58AB9D00817054 /* CateGory */,
 				B62B3AB81C57051D00AE7E4D /* Main.storyboard */,
 				B689D5B81C51BCF7009FF6B5 /* AppDelegate.h */,
 				B689D5B91C51BCF7009FF6B5 /* AppDelegate.m */,
@@ -111,10 +179,6 @@
 				B689D5C31C51BCF7009FF6B5 /* LaunchScreen.storyboard */,
 				B689D5C61C51BCF7009FF6B5 /* Info.plist */,
 				B689D5B51C51BCF7009FF6B5 /* Supporting Files */,
-				B689D5EE1C51D1EF009FF6B5 /* SearchTBViewController.h */,
-				B689D5EF1C51D1EF009FF6B5 /* SearchTBViewController.m */,
-				B689D5F11C51D312009FF6B5 /* SearchTableView.h */,
-				B689D5F21C51D312009FF6B5 /* SearchTableView.m */,
 			);
 			path = SearchTableview;
 			sourceTree = "<group>";
@@ -249,8 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62B3AB91C57051D00AE7E4D /* Main.storyboard in Resources */,
+				B659E5851C58B71E00817054 /* gesturePswd1@2x.png in Resources */,
 				B689D5C51C51BCF7009FF6B5 /* LaunchScreen.storyboard in Resources */,
+				B659E5911C58BFDF00817054 /* SearchCell.xib in Resources */,
 				B689D5C21C51BCF7009FF6B5 /* Assets.xcassets in Resources */,
+				B659E5831C58B4FA00817054 /* escrowAcct@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,9 +343,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B689D5BA1C51BCF7009FF6B5 /* AppDelegate.m in Sources */,
-				B689D5F31C51D312009FF6B5 /* SearchTableView.m in Sources */,
-				B689D5F01C51D1EF009FF6B5 /* SearchTBViewController.m in Sources */,
+				B659E5901C58BFDF00817054 /* SearchCell.m in Sources */,
+				B659E5921C58BFDF00817054 /* SearchTBViewController.m in Sources */,
+				B659E5961C58C6B900817054 /* SearchView.m in Sources */,
+				B659E5801C58AE6B00817054 /* UIColor+Util.m in Sources */,
 				B689D5B71C51BCF7009FF6B5 /* main.m in Sources */,
+				B659E5931C58BFDF00817054 /* SearchTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchTableView.h"
+#import "SearchView.h"
 @interface SearchTBViewController : UIViewController<SearchTableViewDelegate,UISearchBarDelegate>
 
 @end
