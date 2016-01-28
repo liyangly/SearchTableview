@@ -68,6 +68,10 @@ static NSString * const cellID = @"ID";
     
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([_searchtbdelegate respondsToSelector:@selector(closekeyboard)]) {
+        [_searchtbdelegate closekeyboard];
+    }
+}
 
 @end

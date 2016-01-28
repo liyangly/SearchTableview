@@ -18,6 +18,8 @@ id object = @"🐷";
     SearchView *searchview;
     SearchTableView *searchtableview;
     NSArray *dataarr;
+    NSArray *dataarr1;
+    NSArray *dataarr2;
 }
 @end
 
@@ -37,6 +39,8 @@ id object = @"🐷";
     NSDictionary *dict8 = @{@"type":@"国家",@"title":@"日本是什么怎么怎么地"};
     NSDictionary *dict9 = @{@"type":@"国家",@"title":@"韩国是什么怎么怎么地"};
     dataarr = @[dict0,dict1,dict2,dict3,dict4,dict5,dict6,dict7,dict8,dict9];
+    dataarr1 = @[dict0,dict2,dict4,dict6];
+    dataarr2= @[dict1,dict3,dict5];
     [self initlayout];
 }
 
@@ -88,10 +92,11 @@ id object = @"🐷";
     self.navigationController.navigationBarHidden = YES;
     CGSize mainsize = [UIScreen mainScreen].bounds.size;
     searchview.frame = CGRectMake(0, 20, mainsize.width, 50);
-    searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width-100, 50);
-    searchtableview.frame = CGRectMake(0, 20+60, mainsize.width, mainsize.height-124);
-    
-    searchview.searchBtn.frame = CGRectMake(mainsize.width-90, 3, 90, 44);
+    searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width, 50);
+    searchview.searchbar.scopeButtonTitles = @[@"cancle",@"取消"];
+    searchview.searchbar.selectedScopeButtonIndex = 1;
+    searchview.searchbar.showsCancelButton = YES;
+    searchtableview.frame = CGRectMake(0, 20+60, mainsize.width, mainsize.height-124+44);
     
     return YES;
 }
@@ -101,11 +106,36 @@ id object = @"🐷";
     CGSize mainsize = [UIScreen mainScreen].bounds.size;
     searchview.frame = CGRectMake(0, 64, mainsize.width, 50);
     searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width, 50);
+    searchview.searchbar.showsCancelButton = NO;
     searchtableview.frame = CGRectMake(0, 64+60, mainsize.width, mainsize.height-124);
-    
-    searchview.searchBtn.frame = CGRectMake(mainsize.width-90, 3, 0, 44);
+    if ([searchview.searchbar.text isEqualToString:@""]){
+        NSLog(@"null");
+        searchtableview.dataarr = dataarr;
+        [searchtableview reloadData];
+    }
     
     return YES;
 }
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar __TVOS_PROHIBITED{
+    [self closekeyboard];
+}
+
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text NS_AVAILABLE_IOS(3_0){
+    if([searchview.searchbar.text isEqualToString:@"语言"]){
+        NSLog(@"语言");
+        searchtableview.dataarr = dataarr1;
+        
+    }else if ([searchview.searchbar.text isEqualToString:@"文字"]){
+        NSLog(@"文字");
+        searchtableview.dataarr = dataarr2;
+    }
+    [searchtableview reloadData];
+    return YES;
+}
+-(void)closekeyboard{
+    if ([searchview.searchbar respondsToSelector:@selector(isFirstResponder)] && [searchview.searchbar isFirstResponder] ) {
+        [searchview.searchbar resignFirstResponder];
+    }
+}
 @end

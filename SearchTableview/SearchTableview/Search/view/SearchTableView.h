@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @protocol SearchTableViewDelegate<NSObject>
 @optional
-
+-(void)closekeyboard;
 @end
 
 @interface SearchTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
