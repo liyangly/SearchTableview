@@ -15,8 +15,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         CGSize mainsize = [UIScreen mainScreen].bounds.size;
-        self.backgroundColor = [UIColor colorWithRed:200.0/255 green:200.0/255 blue:205.0/255 alpha:0.5];
         searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, mainsize.width, 50)];
+        searchbar.barTintColor = [UIColor colorWithRed:217.0/255 green:217.0/255 blue:217.0/255 alpha:1.0];
         [self addSubview:searchbar];
         searchbar.placeholder = @"搜索";
         

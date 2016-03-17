@@ -11,7 +11,7 @@
 extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
 static size_t const count = 1000;
 static size_t const iterations = 10000;
-id object = @"🐷";
+id object = @"🐷♊️♊️";
 @interface SearchTBViewController ()
 {
     UIView *container;
@@ -20,6 +20,7 @@ id object = @"🐷";
     NSArray *dataarr;
     NSArray *dataarr1;
     NSArray *dataarr2;
+    UIButton *maskBtn;
 }
 @end
 
@@ -56,6 +57,12 @@ id object = @"🐷";
     searchtableview.searchtbdelegate = self;
     searchtableview.dataarr = dataarr;
     
+    maskBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 114, mainsize.width, mainsize.height)];
+    [self.view addSubview:maskBtn];
+    maskBtn.backgroundColor = [UIColor blackColor];
+    maskBtn.layer.opacity = 0;
+    [maskBtn addTarget:self action:@selector(MaskBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+    
     uint64_t t = dispatch_benchmark(iterations, ^{
         @autoreleasepool {
             NSMutableArray *mutableArray = [NSMutableArray array];
@@ -87,27 +94,54 @@ id object = @"🐷";
     NSLog(@"[[NSMutableArray arrayWithCapacity] addObject:] Avg. Runtime: %llu ns", t_1);
     
 }
+
+- (void)MaskBtnPress:(id)sender{
+    
+    [self controlAccessView:0];
+    
+}
+
+- (void)controlAccessView:(float)alphaValue{
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        [maskBtn setAlpha:alphaValue];
+        
+    } completion:^(BOOL finished) {
+        
+        if (alphaValue <= 0) {
+            
+            [searchview.searchbar resignFirstResponder];
+            
+        }
+        
+    }];
+    
+}
+
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     
-    self.navigationController.navigationBarHidden = YES;
-    CGSize mainsize = [UIScreen mainScreen].bounds.size;
-    searchview.frame = CGRectMake(0, 20, mainsize.width, 50);
-    searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width, 50);
-    searchview.searchbar.scopeButtonTitles = @[@"cancle",@"取消"];
-    searchview.searchbar.selectedScopeButtonIndex = 1;
-    searchview.searchbar.showsCancelButton = YES;
-    searchtableview.frame = CGRectMake(0, 20+60, mainsize.width, mainsize.height-124+44);
+    [self controlAccessView:0.8];
+    
+//    self.navigationController.navigationBarHidden = YES;
+//    CGSize mainsize = [UIScreen mainScreen].bounds.size;
+//    searchview.frame = CGRectMake(0, 20, mainsize.width, 50);
+//    searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width, 50);
+//    searchview.searchbar.scopeButtonTitles = @[@"cancle",@"取消"];
+//    searchview.searchbar.selectedScopeButtonIndex = 1;
+//    searchview.searchbar.showsCancelButton = YES;
+//    searchtableview.frame = CGRectMake(0, 20+60, mainsize.width, mainsize.height-124+44);
     
     return YES;
 }
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
     
-    self.navigationController.navigationBarHidden = NO;
-    CGSize mainsize = [UIScreen mainScreen].bounds.size;
-    searchview.frame = CGRectMake(0, 64, mainsize.width, 50);
-    searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width, 50);
-    searchview.searchbar.showsCancelButton = NO;
-    searchtableview.frame = CGRectMake(0, 64+60, mainsize.width, mainsize.height-124);
+//    self.navigationController.navigationBarHidden = NO;
+//    CGSize mainsize = [UIScreen mainScreen].bounds.size;
+//    searchview.frame = CGRectMake(0, 64, mainsize.width, 50);
+//    searchview.searchbar.frame = CGRectMake(0, 0, mainsize.width, 50);
+//    searchview.searchbar.showsCancelButton = NO;
+//    searchtableview.frame = CGRectMake(0, 64+60, mainsize.width, mainsize.height-124);
     if ([searchview.searchbar.text isEqualToString:@""]){
         NSLog(@"null");
         searchtableview.dataarr = dataarr;
@@ -118,7 +152,7 @@ id object = @"🐷";
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar __TVOS_PROHIBITED{
-    [self closekeyboard];
+    [self controlAccessView:0];
 }
 
 - (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text NS_AVAILABLE_IOS(3_0){
@@ -133,9 +167,9 @@ id object = @"🐷";
     [searchtableview reloadData];
     return YES;
 }
--(void)closekeyboard{
-    if ([searchview.searchbar respondsToSelector:@selector(isFirstResponder)] && [searchview.searchbar isFirstResponder] ) {
-        [searchview.searchbar resignFirstResponder];
-    }
-}
+//-(void)closekeyboard{
+//    if ([searchview.searchbar respondsToSelector:@selector(isFirstResponder)] && [searchview.searchbar isFirstResponder] ) {
+//        [searchview.searchbar resignFirstResponder];
+//    }
+//}
 @end

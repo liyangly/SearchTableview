@@ -10,5 +10,5 @@
 #import "SearchTableView.h"
 #import "SearchView.h"
 @interface SearchTBViewController : UIViewController<SearchTableViewDelegate,UISearchBarDelegate>
--(void)closekeyboard;
+//-(void)closekeyboard;
 @end

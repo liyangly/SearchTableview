@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SearchTBViewController.h"
+#import "CycleViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,10 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:217.0/255 green:217.0/255 blue:217.0/255 alpha:0.5]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[SearchTBViewController new]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:217.0/255 green:217.0/255 blue:217.0/255 alpha:1.0]];
     
+    self.window.backgroundColor = [UIColor whiteColor];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[SearchTBViewController new]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[CycleViewController new]];
     return YES;
 }
 
